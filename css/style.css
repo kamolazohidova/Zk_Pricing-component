@@ -1,4 +1,5 @@
 /* FONTS  */
+
 @font-face {
     font-family: "Montserrat";
     src: url("../fonts/") format("woff2"),
@@ -31,6 +32,10 @@ html {
 *::before,
 *::after {
     box-sizing: inherit;
+}
+
+*:focus {
+    outline: 2px dashed var(--text-color);
 }
 
 img {
@@ -103,16 +108,23 @@ body {
 }
 
 .button-primary {
-    background-color: var(--bg-color);
+    background-color: hsl(237, 63%, 65%);
     background-image: linear-gradient(135deg, #A2A7F0 0%, #696EDD 100%);;
     color: var(--accent-color);
 }
 
 .button-primary:hover {
-    background-color: var(--accent-color);
+    background-color: transparent;
     background-image: none;
     color: var(--bg-color);
     border-color: var(--bg-color);
+}
+
+.button-primary:active {
+    background-color: var(--bg-color);
+    background-image: none;
+    color: var(--accent-color);
+    opacity: 0.6;
 }
 
 .button-white {
@@ -127,6 +139,13 @@ body {
     border-color: var(--accent-color);
 }
 
+.button-white:active {
+    background-color: var(--accent-color);
+    background-image: none;
+    color: var(--bg-color);
+    opacity: 0.6;
+}
+
 
 /* MAIN-CONTENT  */
 .main-content {
@@ -138,7 +157,7 @@ body {
 .page {
     display: flex;
     flex-direction: column;
-    align-items: var(--text-color);
+    align-items: center;
     padding-top: 70px;
     padding-bottom: 70px;
 }
@@ -267,6 +286,10 @@ body {
     margin-right: 8px;
     font-size: 40px;
     line-height: 40px;
+}
+
+.pricing-plan-value {
+    letter-spacing: -2px;
 }
 
 .pricing-plan-list {
