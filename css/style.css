@@ -280,6 +280,11 @@ body {
     margin-bottom: 32px;
     font-size: 72px;
     line-height: 72px;
+    color: #4a4d60;
+}
+
+.pricing-plan-price-white {
+    color: var(--accent-color);
 }
 
 .pricing-plan-currency {
